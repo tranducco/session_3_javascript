@@ -73,3 +73,4 @@ document.addEventListener('keydown', (e) => {
 lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) closeLightbox();
 });
+
