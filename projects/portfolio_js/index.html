@@ -145,6 +145,7 @@
                                     <h5 class="card-title">E-Commerce Website</h5>
                                     <p class="card-text text-muted">React + Node.js</p>
                                 </div>
+                                <button class="lightbox-trigger" data-index="0">View</button>
                             </div>
                         </div>
                         <div class="portfolio-item col-12 col-md-6 col-lg-4" data-category="web">
@@ -154,6 +155,7 @@
                                     <h5 class="card-title">Social Media App</h5>
                                     <p class="card-text text-muted">Vue.js + Firebase</p>
                                 </div>
+                                <button class="lightbox-trigger" data-index="1">View</button>
                             </div>
                         </div>
                         <div class="portfolio-item col-12 col-md-6 col-lg-4" data-category="web">
@@ -163,6 +165,7 @@
                                     <h5 class="card-title">Company Dashboard</h5>
                                     <p class="card-text text-muted">HTML/CSS + JS</p>
                                 </div>
+                                <button class="lightbox-trigger" data-index="2">View</button>
                             </div>
                         </div>
                         <div class="portfolio-item col-12 col-md-6 col-lg-4" data-category="mobile">
@@ -172,6 +175,7 @@
                                     <h5 class="card-title">Fitness Tracker App</h5>
                                     <p class="card-text text-muted">React Native</p>
                                 </div>
+                                <button class="lightbox-trigger" data-index="3">View</button>
                             </div>
                         </div>
                         <div class="portfolio-item col-12 col-md-6 col-lg-4" data-category="design">
@@ -181,6 +185,7 @@
                                     <h5 class="card-title">Food Delivery App</h5>
                                     <p class="card-text text-muted">Flutter</p>
                                 </div>
+                                <button class="lightbox-trigger" data-index="4">View</button>
                             </div>
                         </div>
                         <div class="portfolio-item col-12 col-md-6 col-lg-4" data-category="web">
@@ -190,6 +195,7 @@
                                     <h5 class="card-title">Brand Identity</h5>
                                     <p class="card-text text-muted">Figma + Photoshop</p>
                                 </div>
+                                <button class="lightbox-trigger" data-index="5">View</button>
                             </div>
                         </div>
                     </div>
@@ -197,7 +203,17 @@
                 
             </div>
         </div>
-
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox-overlay">
+            <button class="lightbox-close">&times;</button>
+            <button class="lightbox-prev">&#10094;</button>
+            <button class="lightbox-next">&#10095;</button>
+            <img id="lightbox-img" class="lightbox-image" src="" alt="">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-title">Project Title</h3>
+                <p id="lightbox-desc">Project description</p>
+            </div>
+        </div>
     <!-- 6. Contact Section -->
     <!-- Contact Section -->
     <section id="contact" class="py-5" style="background-color: #f4f7f6;">
