@@ -18,3 +18,22 @@
     border-color: var(--color-primary);
     color: white;
 }
+
+/* ===== Filter Animation ===== */
+.portfolio-item {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.portfolio-item.show {
+    opacity: 1;
+    transform: scale(1);
+    display: block;         /* Đảm bảo hiện */
+}
+
+.portfolio-item.hide {
+    opacity: 0;
+    transform: scale(0.8);
+    /* Sau animation → ẩn hoàn toàn */
+    position: absolute;
+    pointer-events: none;
+}
