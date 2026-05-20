@@ -35,3 +35,51 @@
     position: absolute;
     pointer-events: none;
 }
+
+/* Trạng thái mặc định: Ẩn lightbox đi */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 2000;
+}
+
+/* Trạng thái khi được JS thêm class 'active': Hiện lightbox lên */
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Style cho các thành phần bên trong */
+.lightbox-image {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox-close, .lightbox-prev, .lightbox-next {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.lightbox-close { top: 20px; right: 20px; }
+.lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    text-align: center;
+}

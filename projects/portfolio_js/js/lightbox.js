@@ -7,10 +7,13 @@ const prevBtn = document.querySelector('.lightbox-prev');
 const nextBtn = document.querySelector('.lightbox-next');
 
 // 2. Portfolio data
-const portfolioItems = [
-    { src: 'project1-full.jpg', title: 'Project 1', desc: 'Description 1' },
-    { src: 'project2-full.jpg', title: 'Project 2', desc: 'Description 2' },
-    { src: 'project3-full.jpg', title: 'Project 3', desc: 'Description 3' },
+const lightboxData = [
+    { src: '/session_1_html_css/projects/portfolio_site/img/bg1.jpg', title: 'Project 1', desc: 'Description 1' },
+    { src: '/session_1_html_css/projects/portfolio_site/img/bg2.jpg', title: 'Project 2', desc: 'Description 2' },
+    { src: '/session_1_html_css/projects/portfolio_site/img/bg3.jpg', title: 'Project 3', desc: 'Description 3' },
+    { src: '/session_1_html_css/projects/portfolio_site/img/bg4.jpg', title: 'Project 4', desc: 'Description 4' },
+    { src: '/session_1_html_css/projects/portfolio_site/img/bg5.jpg', title: 'Project 5', desc: 'Description 5' },
+    { src: '/session_1_html_css/projects/portfolio_site/img/bg6.jpg', title: 'Project 6', desc: 'Description 6' },
 ];
 let currentIndex = 0;
 
@@ -30,19 +33,19 @@ function closeLightbox() {
 
 // 5. Update content
 function updateLightboxContent() {
-    const item = portfolioItems[currentIndex];
+    const item = lightboxData[currentIndex];
     lightboxImg.src = item.src;
     lightboxTitle.textContent = item.title;
 }
 
 // 6. Navigation
 function nextImage() {
-    currentIndex = (currentIndex + 1) % portfolioItems.length;
+    currentIndex = (currentIndex + 1) % lightboxData.length;
     updateLightboxContent();
 }
 
 function prevImage() {
-    currentIndex = (currentIndex - 1 + portfolioItems.length) % portfolioItems.length;
+    currentIndex = (currentIndex - 1 + lightboxData.length) % lightboxData.length;
     updateLightboxContent();
 }
 
